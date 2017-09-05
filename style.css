@@ -1,31 +1,117 @@
 html,
 body {
-    max-height: 100%;
     font-family: 'Nunito', sans-serif;
 }
 
-.container {
-	text-align: center;
+div.container {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+.content {
+    padding: 20px;
+}
+
+
+/* For a project card */
+
+div.project {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* grid for masonry */
+
+.grid-container {
+    display: grid;
+    /*  height of auto generated rows */
+    grid-auto-rows: 50px;
+    /*  gap between grid items */
+    grid-gap: 20px;
+    /*  Width of explicitly defined columns 
+        repeat defines pattern of repeating rows
+        auto-full tells grid to line up as many as possible without overflowing container
+        minmax sets min and max size range for each col / row. set to (30%, max available)
+    */
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+}
+
+
+/* sizes to use for the grid */
+
+[xs] {
+    grid-row: span 2;
+}
+
+[s] {
+    grid-row: span 3;
+}
+
+[m] {
+    grid-row: span 4;
+}
+
+[l] {
+    grid-row: span 5;
+}
+
+[xl] {
+    grid-row: span 6;
+}
+
+
+/* A card (material design ish) */
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    position: relative;
+}
+
+
+/* On mouse-over, add a deeper shadow */
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.div-link {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.profile-picture {
-    border-radius: 50%;
-    border: 1px solid #c2c3c4;
-    width:30%;
-    height:30%;
+h1.page_header {
+    border-bottom: 1px solid #8d8d8d;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
 
-.link-grid {
-    border-spacing: 20px;
-    margin: auto;
+p {
+    margin: 0;
 }
 
-a {
-    color: inherit;
+p.date {
+    color: dimgray;
+}
+
+h3.project {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+.margin-10 {
+    margin: 10px;
 }
