@@ -1,15 +1,38 @@
 <!-- William Reed 2018 -->
 <!DOCTYPE html>
 <html lang="en-US">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.1/masonry.pkgd.js"></script>
+
+    <script>
+        // waiting for images to load so the masonry grid is sized properly
+        $(window).on('load', function() {
+        //$(document).ready(function () {
+            $('.grid').masonry({
+                itemSelector: '.card', 
+                gutter: 20,
+                horizontalOrder: true,
+                fitWidth: true
+            });
+        });
+    </script>
 </head>
 
 <body>
+    <script>
+
+    </script>
+
     <div class="container">
         <h1 class="page_header">William Reed - Projects</h1>
 
@@ -18,145 +41,157 @@
             <li>Projects</li>
         </ul>
 
-        <div class="content grid-container">
-            <div class="card" eight>
-                <img src="https://i.imgur.com/mS04Jij.jpg" style="width:100%">
-                <div class="project">
-                    <h3 class="project">Color Pencil & Epoxy Lathe Bowl</h3>
-                    <p class="date">12/20/2017</p>
-                    <p>My first lathe project - a color pencil and epoxy bowl.</p>
-                    <a href="https://imgur.com/a/v0Wfw"><span class="div-link"></span></a>
-                    <div class="labels">
-                        <p class="label diy">DIY</p>
+        <div class="content">
+            <div class="grid">
+                <div class="card">
+                    <img src="https://i.imgur.com/mS04Jij.jpg" style="width:100%">
+                    <div class="project">
+                        <h3 class="projectHeader">Color Pencil &amp; Epoxy Lathe Bowl</h3>
+                        <p class="date">12/20/2017</p>
+                        <p>My first lathe project - a color pencil and epoxy bowl.</p>
+                        <a href="https://imgur.com/a/v0Wfw"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label diy">DIY</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" nine>
-                <img src="https://i.imgur.com/ljyreu3.jpg" style="width:100%">
-                <div class="project">
-                    <h3 class="project">Clear Phone Glass</h3>
-                    <p class="date">11/23/2017</p>
-                    <p>Replaced the cracked rear glass of my Galaxy S8 Plus with a clear rear panel by striping the paint off of a replacement and installing it. </p>
-                    <a href="https://i.imgur.com/ljyreu3.jpg"><span class="div-link"></span></a>
-                    <div class="labels">
-                        <p class="label diy">DIY</p>
+                <div class="card">
+                    <img src="https://i.imgur.com/ljyreu3.jpg" style="width:100%">
+                    <div class="project">
+                        <h3 class="projectHeader">Clear Phone Glass</h3>
+                        <p class="date">11/23/2017</p>
+                        <p>Replaced the cracked rear glass of my Galaxy S8 Plus with a clear rear panel by striping the paint off of a replacement and installing it. </p>
+                        <a href="https://i.imgur.com/ljyreu3.jpg"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label diy">DIY</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" seven>
-                <img src="https://raw.githubusercontent.com/LiveThread/android/master/non_android_files/feature_graphic.png" style="width:100%">
-                <div class="project">
-                    <h3 class="project">LiveThread for Reddit</h3>
-                    <p class="date">10/1/2017</p>
-                    <p>LiveThread for Android is an Application that turns standard Reddit threads into live threads. After selecting a subreddit and a particular post, all new comments will stream onto the screen. Originally made for Husky Hacks 3 in 36 hours. </p>
-                    <a href="https://github.com/LiveThread/android"><span class="div-link"></span></a>
-                    <div class="labels">
-                        <p class="label programming">Programming</p> <p class="label android">Android</p>
+                <div class="card">
+                    <img src="https://raw.githubusercontent.com/LiveThread/android/master/non_android_files/feature_graphic.png" style="width:100%">
+                    <div class="project">
+                        <h3 class="projectHeader">LiveThread for Reddit</h3>
+                        <p class="date">10/1/2017</p>
+                        <p>LiveThread for Android is an Application that turns standard Reddit threads into live threads. After selecting a subreddit and a particular post, all new comments will stream onto the screen. Originally made for Husky Hacks 3 in 36 hours. </p>
+                        <a href="https://github.com/LiveThread/android"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p> <p class="label android">Android</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" six>
-                <img src="https://github.com/william-reed/EvergreenTutoring/raw/master/screenshots/home.png" style="width:100%">
-                <div class="project">
-                    <h3 class="project">Evergreen Tutoring</h3>
-                    <p class="date">08/1/2017</p>
-                    <p>An online tutoring scheduling service utilizing Django, Python, Bootstrap, and material design. </p>
-                    <a href="https://github.com/william-reed/EvergreenTutoring"><span class="div-link"></span></a>
-                    <div class="labels">
-                        <p class="label programming">Programming</p>
+                <div class="card">
+                    <img src="https://github.com/william-reed/EvergreenTutoring/raw/master/screenshots/home.png" style="width:100%">
+                    <div class="project">
+                        <h3 class="projectHeader">Evergreen Tutoring</h3>
+                        <p class="date">08/1/2017</p>
+                        <p>An online tutoring scheduling service utilizing Django, Python, Bootstrap, and material design. </p>
+                        <a href="https://github.com/william-reed/EvergreenTutoring"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" seven>
-                <img src="https://camo.githubusercontent.com/92f26daf9b2c592c3515b5c8c0b09f1ca1610010/687474703a2f2f692e696d6775722e636f6d2f774850754773482e706e67" style="width:100%">
-                <div class="project">
-                    <h3 class="project">Logger Pro Data Viewer</h3>
-                    <p class="date">02/16/2016</p>
-                    <p>Program to view position, velocity, and acceleration graphs from Logger Pro CMBL Files. </p>
-                    <a href="https://github.com/william-reed/LoggerProDataViewer"><span class="div-link"></span></a>
-                    <div class="labels">
-                        <p class="label programming">Programming</p>
+                <div class="card">
+                    <img src="https://camo.githubusercontent.com/92f26daf9b2c592c3515b5c8c0b09f1ca1610010/687474703a2f2f692e696d6775722e636f6d2f774850754773482e706e67" style="width:100%">
+                    <div class="project">
+                        <h3 class="projectHeader">Logger Pro Data Viewer</h3>
+                        <p class="date">02/16/2016</p>
+                        <p>Program to view and export position, velocity, and acceleration graphs from Logger Pro CMBL Files. </p>
+                        <a href="https://github.com/william-reed/LoggerProDataViewer"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" seven>
-                <img src="http://i.imgur.com/d0292c1.png" style="width:100%">
-                <div class="project">
-                    <h3 class="project">Project Freeman</h3>
-                    <p class="date">08/29/2015</p>
-                    <p>A spin off of the board game Risk. Made with Java with the help of LibGDX, Scene2D for UI, KryoNet for client / server networking. The game included an auto updating launcher and log in system as well.</p>
-                    <a href="http://www.java-gaming.org/topics/project-freeman-a-remake-of-risk/37458/msg/357439/view.html#msg357439"><span class="div-link"></span></a>
-                    <div class="labels">
-                        <p class="label programming">Programming</p>
+                <div class="card">
+                    <img src="http://i.imgur.com/d0292c1.png" style="width:100%">
+                    <div class="project">
+                        <h3 class="projectHeader">Project Freeman</h3>
+                        <p class="date">08/29/2015</p>
+                        <p>A spin off of the board game Risk. Made with Java with the help of LibGDX, Scene2D for UI, KryoNet for client / server networking. The game included an auto updating launcher and log in system as well.</p>
+                        <a href="http://www.java-gaming.org/topics/project-freeman-a-remake-of-risk/37458/msg/357439/view.html#msg357439"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="project card" three>
-                <h3 class="project">GroupMe Java Wrapper</h3>
-                <p class="date">08/29/2015</p>
-                <p>A Java wrapper for the GroupMe bot API. </p>
-                <a href="https://github.com/william-reed/GroupMe-Java-Wrapper"><span class="div-link"></span></a>
-                <div class="labels">
-                    <p class="label programming">Programming</p>
-                </div>
-            </div>
-            <div class="project card" four>
-                <h3 class="project">GroupMe Bots with Google Apps Script</h3>
-                <p class="date">08/26/2014</p>
-                <p>Central repository for hosting many examples of Google App Script bots for GroupMe as well as custom data saving implementations (map & list like structures). </p>
-                <a href="https://github.com/william-reed/GroupMe-Bots-With-Google-Apps-Script"><span class="div-link"></span></a>
-                <div class="labels">
-                    <p class="label programming">Programming</p>
-                </div>
-            </div>
-            <div class="project card" three>
-                <h3 class="project">Bukkit IRC</h3>
-                <p class="date">09/14/2013</p>
-                <p>A minecraft bukkit plugin that runs chat messages through an IRC channel / server. </p>
-                <a href="https://github.com/william-reed/Bukkit-IRC"><span class="div-link"></span></a>
-                <div class="labels">
-                    <p class="label programming">Programming</p>
-                </div>
-            </div>
-            <div class="project card" five>
-                <h3 class="project">Bukkit Plugin - Horse Protection and Editing</h3>
-                <p class="date">07/14/2013</p>
-                <p>As horses first became available on Minecraft they were a huge problem with stealing others. This plugin allows horses to be protected from griefing and other events through claiming horses adding allowed users, and changing their horses stats. ~3500 downloads</p>
-                <a href="https://dev.bukkit.org/projects/mtc-horses-plus"><span class="div-link"></span></a>
-                <div class="labels">
-                    <p class="label programming">Programming</p>
-                </div>
-            </div>
-            <div class="project card" three>
-                <h3 class="project">Bukkit Plugin - Potions</h3>
-                <p class="date">07/11/2013</p>
-                <p>A Minecraft Bukkit plugin for using designated potions for a certain interval of time. ~500 downloads</p>
-                <a href="https://github.com/william-reed/mtcpotions"><span class="div-link"></span></a>
-                <div class="labels">
-                    <p class="label programming">Programming</p>
-                </div>
-            </div>
-            <div class="card" seven>
-                <img src="http://i.imgur.com/vkNlvmZ.jpg" style="width:100%">
-                <div class="project">
-                    <h3 class="project">Lode Scape RPG</h3>
-                    <p class="date">07/05/2013</p>
-                    <p>My first attempt at an RPG game. It is mostly a demonstration of the power of LibGDX. The game includes a small mini quest with some interactive NPC's in the game.</p>
-                    <a href="https://github.com/william-reed/Lode-Scape"><span class="div-link"></span></a>
-                    <div class="labels">
-                        <p class="label programming">Programming</p>
+                <div class="card">
+                    <div class="project">
+                        <h3 class="projectHeader">GroupMe Java Wrapper</h3>
+                        <p class="date">08/29/2015</p>
+                        <p>A Java wrapper for the GroupMe bot API. </p>
+                        <a href="https://github.com/william-reed/GroupMe-Java-Wrapper"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card" eleven>
-                <img src="https://lh5.ggpht.com/rfr-Jl6Bhfjyn12QKKlVR3QhGt71f74r-hNHpeDgZHuDLNmRNsKz1Ui3cpyOr5M3um0" style="width:100%">
-                <div class="project">
-                    <h3 class="project">Snow Baller</h3>
-                    <p class="date">12/23/2012</p>
-                    <p>My first android application. A simple and silly game guiding a penguin to avoid oncoming snowballs</p>
-                    <a href="http://www.java-gaming.org/topics/snow-baller-avoid-as-many-snowballs-as-possible/28225/view.html"><span class="div-link"></span></a>
-                    <div class="labels">
-                        <p class="label programming">Programming</p> <p class="label android">Android</p>
+                <div class="card">
+                    <div class="project">
+                        <h3 class="projectHeader">GroupMe Bots with Google Apps Script</h3>
+                        <p class="date">08/26/2014</p>
+                        <p>Central repository for hosting many examples of Google App Script bots for GroupMe as well as custom data saving implementations (map &amp; list like structures). </p>
+                        <a href="https://github.com/william-reed/GroupMe-Bots-With-Google-Apps-Script"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project">
+                        <h3 class="projectHeader">Bukkit IRC</h3>
+                        <p class="date">09/14/2013</p>
+                        <p>A minecraft bukkit plugin that runs chat messages through an IRC channel / server. </p>
+                        <a href="https://github.com/william-reed/Bukkit-IRC"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project">
+                        <h3 class="projectHeader">Bukkit Plugin - Horse Protection and Editing</h3>
+                        <p class="date">07/14/2013</p>
+                        <p>As horses first became available on Minecraft they were a huge problem with stealing others. This plugin allows horses to be protected from griefing and other events through claiming horses adding allowed users, and changing their horses stats. ~3500 downloads</p>
+                        <a href="https://dev.bukkit.org/projects/mtc-horses-plus"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project">
+                        <h3 class="projectHeader">Bukkit Plugin - Potions</h3>
+                        <p class="date">07/11/2013</p>
+                        <p>A Minecraft Bukkit plugin for using designated potions for a certain interval of time. ~500 downloads</p>
+                        <a href="https://github.com/william-reed/mtcpotions"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="http://i.imgur.com/vkNlvmZ.jpg" style="width:100%">
+                    <div class="project">
+                        <h3 class="projectHeader">Lode Scape RPG</h3>
+                        <p class="date">07/05/2013</p>
+                        <p>My first attempt at an RPG game. It is mostly a demonstration of the power of LibGDX. The game includes a small mini quest with some interactive NPC's in the game.</p>
+                        <a href="https://github.com/william-reed/Lode-Scape"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://lh5.ggpht.com/rfr-Jl6Bhfjyn12QKKlVR3QhGt71f74r-hNHpeDgZHuDLNmRNsKz1Ui3cpyOr5M3um0" style="width:100%">
+                    <div class="project">
+                        <h3 class="projectHeader">Snow Baller</h3>
+                        <p class="date">12/23/2012</p>
+                        <p>My first android application. A simple and silly game guiding a penguin to avoid oncoming snowballs</p>
+                        <a href="http://www.java-gaming.org/topics/snow-baller-avoid-as-many-snowballs-as-possible/28225/view.html"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p> <p class="label android">Android</p>
+                        </div>
                     </div>
                 </div>
             </div>
