@@ -5,9 +5,20 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-div.container {
-    margin: 0 auto;
-    width: 90%;
+/* normally we want the width to adapt to screen size */
+@media (max-width: 1500px) {
+    div.container {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+/* for big monitors cap the width */
+@media (min-width: 1501px) {
+    div.container {
+        margin: 0 auto;
+        width: 1400px;
+    }
 }
 
 .grid {
