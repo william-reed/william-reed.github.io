@@ -157,6 +157,13 @@ ul.breadcrumb li a:hover {
     color: white;
 }
 
+/* on hover hilight the thing */
+.label:hover {
+    transition: 0.3s;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
 /* labels per type to define colors for them */
 .label.android {
     background: #A4C639;
@@ -175,8 +182,9 @@ ul.breadcrumb li a:hover {
     background: #c93859;
 }
 
-
-
+.label.show_all {
+    background: gray;
+}
 
 
 

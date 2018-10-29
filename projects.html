@@ -13,6 +13,7 @@
     integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.1/masonry.pkgd.js"></script>
+    <script src="https://use.fontawesome.com/fb206e7cba.js"></script>
 
     <script>
         // waiting for images to load so the masonry grid is sized properly
@@ -25,6 +26,23 @@
                 fitWidth: true
             });
         });
+    </script>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-105338742-1', 'auto');
+        ga('send', 'pageview');
     </script>
 </head>
 
@@ -40,9 +58,50 @@
             <li><a href="/">Home</a></li>
             <li>Projects</li>
         </ul>
+<!--         <div class="labels">
+            <a class="label show_all" id="show_all">Show All</a>
+            <a class="label android" id="android">Android <i class="fa fa-times" aria-hidden="true"></i></a>
+            <a class="label diy" id="diy">DIY <i class="fa fa-times" aria-hidden="true"></i></a>
+            <a class="label programming" id="programming">Programming <i class="fa fa-times" aria-hidden="true"></i></a>
+            
+        </div> -->
 
         <div class="content">
             <div class="grid">
+                <div class="card">
+                    <img src="https://i.imgur.com/Svu2gFS.png" style="width:100%">
+                    <div class="project">
+                        <h3 class="projectHeader">SMS Reminder Web App</h3>
+                        <p class="date">06/24/2018</p>
+                        <p>This project came out of a my final assignment for CS 4550: Web Development. It is a utilizes the MEAN stack in addition to a python script (used as a cron job) to actually send the SMS messages to recipients.</p>
+                        <a href="https://github.com/william-reed/webdev-project-angular"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label diy">DIY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project">
+                        <h3 class="projectHeader">PyMS</h3>
+                        <p class="date">06/10/2018</p>
+                        <p>Send SMS messages from python. </p>
+                        <a href="https://github.com/william-reed/PyMS"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="project">
+                        <h3 class="projectHeader">LetsRun.com Scraper</h3>
+                        <p class="date">02/23/2018</p>
+                        <p>A scraper for the world famous running forums on LetsRun.com in addition to some statistical analysis on the posts from the site.</p>
+                        <a href="https://github.com/william-reed/letsrun-scraper"><span class="div-link"></span></a>
+                        <div class="labels">
+                            <p class="label programming">Programming</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="card">
                     <img src="https://i.imgur.com/mS04Jij.jpg" style="width:100%">
                     <div class="project">

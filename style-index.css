@@ -5,12 +5,6 @@ body {
 
 .container {
     text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
 }
 
 .profile-picture {
@@ -23,6 +17,10 @@ body {
 .link-grid {
     border-spacing: 20px;
     margin: auto;
+}
+
+.calendar {
+    margin-top: 50px;
 }
 
 .footer {
