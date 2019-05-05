@@ -1,67 +1,397 @@
-<!-- William Reed 2018 -->
 <!DOCTYPE html>
 <html lang="en-US">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>William Reed</title>
     <!-- github contrib calendar -->
     <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"> </script>
     <link rel="stylesheet" href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"/>
-    
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="style-index.css" />
+    <link rel="stylesheet" href="style.css"/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <script src="https://use.fontawesome.com/fb206e7cba.js"></script>
-    
 
     <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-105338742-1', 'auto');
-        ga('send', 'pageview');
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-105338742-1', 'auto');
+      ga('send', 'pageview');
     </script>
-</head>
+  </head>
 
-<body>
-    <div class="container">
-        <h1>William Reed</h1>
-        <img src="assets/williamreed.jpeg" alt="William Reed" class="profile-picture">
-        <p class="margin-10">Northeastern University '20<br/>Computer Science Major</p>
-        <div>
-            <a class="margin-5" href="projects.html"><i class="fa fa-folder-open-o fa-3x" aria-hidden="true"></i>Projects</a>
-            <a class="margin-5" href="https://www.linkedin.com/in/william--reed/"><i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>About</a>
-            <a class="margin-5" href="mailto:wreed58@gmail.com"><i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>Contact</a>
-        </div>
+  <body>
+    <div class="container pt-md-4">
+      <div class="row">
+        <div class="col-10 text-center mx-auto">
+          <h1>William Reed</h1>
+          <h5 class="pb-2">Northeastern University 2020</h5>
 
-        <div class="calendar">
+          <div class="row pb-2">
+            <div class="col-md-6 text-center mx-auto">
+              <a class="col-md-3 margin-5" href="mailto:willi@mreed.dev"><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></a>
+              <a class="col-md-3 margin-5" href="https://stackoverflow.com/users/1572848/william-reed"><i class="fa fa-stack-overflow fa-2x" aria-hidden="true"/></i></a>
+              <a class="col-md-3 margin-5" href="https://www.linkedin.com/in/william--reed/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+              <a class="col-md-3 margin-5" href="https://github.com/william-reed/"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="calendar pb-2">
             <!-- Calendar will go here on load -->
-        </div>
-        <script>
+          </div>
+          <script>
+            // the non es6 life 
             new GitHubCalendar(".calendar", "william-reed");
-        </script>
-        
+            // hide on small screens / resize
+            window.onresize = function() {
+              var display = 'block';
+              if (window.innerWidth <= 1000)
+                display = 'none';
+              document.getElementsByClassName("calendar")[0].style.display = display;
+            };
+          </script>
+
+          <hr/>
+          <h3>Projects</h3>
+          <div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/toy-signal-protocol"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://media.threatpost.com/wp-content/uploads/sites/103/2016/11/06232549/signal_protocol.png" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">Signal Protocol Toy App</h3>
+                  <p class="date">5/4/2019</p>
+                  <p>A Kotlin based program to mess around with E2E encryption with the Signal Protocol.</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/objectbox-demo"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://camo.githubusercontent.com/4f8c63ad4cbe9f116f818e5f859716dfff7f1b48/68747470733a2f2f692e696d6775722e636f6d2f32665a7a6d70702e706e67" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">ObjextBox Demo</h3>
+                  <p class="date">3/25/2019</p>
+                  <p>A small demo showing storage and retrieval speeds of ObjectBox with direct comparison available to SQLite built in.</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p> <p class="label android">Android</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/toy-stock-ticker"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://i.imgur.com/avduh1P.png" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">Toy Stock Ticker App</h3>
+                  <p class="date">11/20/2018</p>
+                  <p>A toy app demonstrating a stock ticker utilizing Android Architecture components (ViewModels). Utilizes Kotlin, RxJava, Dagger, Retrofit, and GSON.</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p> <p class="label android">Android</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/webdev-project-angular"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://i.imgur.com/Svu2gFS.png" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">SMS Reminder Web App</h3>
+                  <p class="date">06/24/2018</p>
+                  <p>This project came out of a my final assignment for CS 4550: Web Development. It is a utilizes the MEAN stack in addition to a python script (used as a cron job) to actually send the SMS messages to recipients. Utilizes Angular, Express, Node.js, and MongoDB.</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/PyMS"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Python.svg" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">PyMS</h3>
+                  <p class="date">06/10/2018</p>
+                  <p>Send SMS messages from python using SMS / MMS gateways. </p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/letsrun-scraper"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://i.imgur.com/0Sd1Sj8.png" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">LetsRun.com Scraper</h3>
+                  <p class="date">02/23/2018</p>
+                  <p>A scraper for the world famous running forums on LetsRun.com in addition to some statistical analysis on the posts from the site.</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://imgur.com/a/v0Wfw"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://i.imgur.com/mS04Jij.jpg" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">Color Pencil &amp; Epoxy Lathe Bowl</h3>
+                  <p class="date">12/20/2017</p>
+                  <p>My first lathe project - a color pencil and epoxy bowl. See the imgur album and its comments for a step-by-step walk through of the process.</p>
+                  <div class="labels">
+                    <p class="label diy">DIY</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://i.imgur.com/ljyreu3.jpg"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://i.imgur.com/ljyreu3.jpg" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">Clear Phone Glass</h3>
+                  <p class="date">11/23/2017</p>
+                  <p>Replaced the cracked rear glass of my Galaxy S8 Plus with a clear rear panel by striping the paint off of a replacement and installing it. I used 1mm thick double sided tape which wound up being a bit thin in the long term to be very effective. 2mm would have been great to use.</p>
+                  <div class="labels">
+                    <p class="label diy">DIY</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/LiveThread/android"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-6">
+                  <img class="img-responsive" src="https://raw.githubusercontent.com/LiveThread/android/master/non_android_files/feature_graphic.png" alt="project picture">
+                </div>
+                <div class="col-md-6 project">
+                  <h3 class="projectHeader">LiveThread for Reddit</h3>
+                  <p class="date">10/1/2017</p>
+                  <p>LiveThread for Android is an Application that turns standard Reddit threads into live threads. After selecting a subreddit and a particular post, all new comments will stream onto the screen. Originally made for Husky Hacks 3 in 36 hours.</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p> <p class="label android">Android</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/EvergreenTutoring"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://github.com/william-reed/EvergreenTutoring/raw/master/screenshots/home.png" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">Evergreen Tutoring</h3>
+                  <p class="date">08/1/2017</p>
+                  <p>An online tutoring scheduling service utilizing Django, Python, Bootstrap, and material design. </p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/LoggerProDataViewer"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://camo.githubusercontent.com/92f26daf9b2c592c3515b5c8c0b09f1ca1610010/687474703a2f2f692e696d6775722e636f6d2f774850754773482e706e67" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">Logger Pro Data Viewer</h3>
+                  <p class="date">02/16/2016</p>
+                  <p>Program to view and export position, velocity, and acceleration graphs from Logger Pro CMBL Files.</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="http://www.java-gaming.org/topics/project-freeman-a-remake-of-risk/37458/msg/357439/view.html#msg357439"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-6">
+                  <img class="img-responsive" src="http://i.imgur.com/d0292c1.png" alt="project picture">
+                </div>
+                <div class="col-md-6 project">
+                  <h3 class="projectHeader">Project Freeman</h3>
+                  <p class="date">08/29/2015</p>
+                  <p>A spin off of the board game Risk. Made with Java with the help of LibGDX, Scene2D for UI, KryoNet for client / server networking. The game included an auto updating launcher and log in system as well.</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/GroupMe-Java-Wrapper"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://d3sq5bmi4w5uj1.cloudfront.net/images/brochure/og_image_poundie.png?1548793104" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">GroupMe Java Wrapper</h3>
+                  <p class="date">08/29/2015</p>
+                  <p>A Java wrapper for the GroupMe bot API. </p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/GroupMe-Bots-With-Google-Apps-Script"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://d3sq5bmi4w5uj1.cloudfront.net/images/brochure/og_image_poundie.png?1548793104" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">GroupMe Bots with Google Apps Script</h3>
+                  <p class="date">08/26/2014</p>
+                  <p>Central repository for containing examples of using Google App Script to host bots for GroupMe as well as custom data saving implementations (map &amp; list like structures) all for free utilizing Google services. </p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/Bukkit-IRC"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://i.imgur.com/Xcl5D9F.png" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">Bukkit IRC</h3>
+                  <p class="date">09/14/2013</p>
+                  <p>A minecraft bukkit plugin that runs chat messages through an IRC channel / server. </p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://dev.bukkit.org/projects/mtc-horses-plus"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://i.imgur.com/Xcl5D9F.png" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">Bukkit Plugin - Horse Protection and Editing</h3>
+                  <p class="date">07/14/2013</p>
+                  <p>As horses first became available on Minecraft they were a huge problem with stealing others. This plugin allows horses to be protected from griefing and other events through claiming horses adding allowed users, and changing their horses stats. ~3500 downloads</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="https://github.com/william-reed/mtcpotions"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://i.imgur.com/Xcl5D9F.png" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">Bukkit Plugin - Potions</h3>
+                  <p class="date">07/11/2013</p>
+                  <p>A Minecraft Bukkit plugin for using designated potions for a certain interval of time. ~500 downloads</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="http://www.java-gaming.org/topics/lodescape-rpg/28679/msg/261599/view.html#msg261599"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-6">
+                  <img class="img-responsive" src="http://i.imgur.com/vkNlvmZ.jpg" alt="project picture">
+                </div>
+                <div class="col-md-6 project">
+                  <h3 class="projectHeader">Lode Scape RPG</h3>
+                  <p class="date">07/05/2013</p>
+                  <p>My first attempt at an RPG game. It is mostly a demonstration of the power of LibGDX featuring a tiled map, particle effects, and Spine 2D based animations. The game includes a small mini quest with some interactive NPC's in the game. Has over 130K views on java-gaming.org</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a href="http://www.java-gaming.org/topics/snow-baller-avoid-as-many-snowballs-as-possible/28225/view.html"><span class="div-link"/></a>
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="img-responsive" src="https://lh5.ggpht.com/rfr-Jl6Bhfjyn12QKKlVR3QhGt71f74r-hNHpeDgZHuDLNmRNsKz1Ui3cpyOr5M3um0" alt="project picture">
+                </div>
+                <div class="col-md-8 project">
+                  <h3 class="projectHeader">Snow Baller</h3>
+                  <p class="date">12/23/2012</p>
+                  <p>My first android application. A simple and silly game guiding a penguin to avoid oncoming snowballs</p>
+                  <div class="labels">
+                    <p class="label programming">Programming</p> <p class="label android">Android</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-
-
-
-    <div class="footer">
-        <a class="margin-5" href="https://stackoverflow.com/users/1572848/william-reed"><i class="fa fa-stack-overflow fa-2x" aria-hidden="true"></i></a>
-        <a class="margin-5" href="https://www.linkedin.com/in/william--reed/"><i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
-        <a class="margin-5" href="https://www.youtube.com/channel/UCDrkIqRd_XiqRzT2pds27wA"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
-        <a class="margin-5" href="https://github.com/william-reed/"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
-    </div>
-</body>
-
+  </body>
 </html>

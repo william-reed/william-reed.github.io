@@ -1,215 +1,82 @@
-/* TODO: pick a naming convention already */
-
-html,
-body {
-    font-family: 'Nunito', sans-serif;
-}
-
-/* normally we want the width to adapt to screen size */
-@media (max-width: 1500px) {
-    div.container {
-        margin: 0 auto;
-        width: 90%;
-    }
-}
-
-/* for big monitors cap the width */
-@media (min-width: 1501px) {
-    div.container {
-        margin: 0 auto;
-        width: 1400px;
-    }
-}
-
-.grid {
-    max-width: 100%;
-    /* center it */
-    margin: 0 auto;
-}
-
-/* clearfix */
-.grid:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-.content {
-    padding: 20px;
-}
-
-
 /* For a project card */
 div.project {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* A card (material design ish) */
 .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    float: left;
-    width: 300px;
-    margin-bottom: 20px;
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* to make the entire div link clickable 
-https://stackoverflow.com/questions/796087/make-a-div-into-a-link
-*/
-.div-link {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    top:0;
-    left: 0;
-
-    z-index: 1;
-}
-
-h1.page_header {
-    border-bottom: 1px solid #8d8d8d;
-    padding-left: 10px;
-    padding-bottom: 10px;
-}
-
-p {
-    margin: 0;
-}
-
-p.date {
-    color: dimgray;
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-bottom: 20px;
 }
 
 h3.projectHeader {
-    margin: 0;
-    margin-top: 5px;
-    margin-bottom: 2px;
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 2px;
 }
 
-.margin-5 {
-    margin: 5px;
+p.date {
+  color: dimgray;
 }
 
-.margin-10 {
-    margin: 10px;
+.div-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  top:0;
+  left: 0;
+
+  z-index: 1;
 }
 
-
-/* Style the list */
-ul.breadcrumb {
-    padding: 10px 16px;
-    list-style: none;
-}
-
-
-/* Display list items side by side */
-ul.breadcrumb li {
-    display: inline;
-    font-size: 18px;
-}
-
-
-/* Add a slash symbol (/) before/behind each list item */
-ul.breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
-}
-
-
-/* Add a color to all links inside the list */
-ul.breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
-}
-
-
-/* Add a color on mouse-over */
-ul.breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
+.img-responsive {
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
 }
 
 /* labels */
 
 /* div for labels - need to give it some padding */
 .labels {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /* an actual label */
 .label {
-    border-radius: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
-    display: inline-block;
-    color: white;
-}
-
-/* on hover hilight the thing */
-.label:hover {
-    transition: 0.3s;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+  border-radius: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  display: inline-block;
+  color: white;
 }
 
 /* labels per type to define colors for them */
 .label.android {
-    background: #A4C639;
+  background: #A4C639;
 }
 
 .label.programming {
-    background: #6d85ad;
+  background: #6d85ad;
 }
 
 /* TODO: this is yellow so it might be weird with a white font */
 .label.woodworking {
-    background: #7a5d55;
+  background: #7a5d55;
 }
 
 .label.diy {
-    background: #c93859;
+  background: #c93859;
 }
-
-.label.show_all {
-    background: gray;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
