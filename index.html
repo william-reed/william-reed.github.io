@@ -56,7 +56,8 @@
             // hide on small screens / resize
             window.onresize = function() {
               var display = 'block';
-              if (window.innerWidth <= 1000)
+              if (window.innerWidth <= 1000
+                || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
                 display = 'none';
               document.getElementsByClassName("calendar")[0].style.display = display;
             };
